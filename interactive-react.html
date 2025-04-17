@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивные веб-приложения с React</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+</head>
+
+<body>
+
+    <header>
+        <h1>Интерактивные веб-приложения с использованием React</h1>
+	<a href="index.html" class="button">Главная</a>
+    </header>
+
+        <nav>
+        <ul>
+            <li><a href="https://react.dev/" target="_blank" >Официальный сайт React</a></li>
+        </ul>
+        </nav>
+
+    <main>
+        <section id="interactive-apps" class="react-lesson">
+            <h2>Создание интерактивных веб-приложений с React</h2>
+
+            <h3>Введение в интерактивность</h3>
+            <p>React позволяет создавать веб-приложения, которые реагируют на действия пользователя, такие как клики, ввод текста, наведение мыши и т.д. Интерактивность достигается за счет использования состояния (state) и обработчиков событий.</p>
+
+            <h3>Пример: Простой переключатель</h3>
+            <p>Этот пример показывает, как создать компонент переключателя, который изменяет текст при клике.</p>
+
+            <div class="react-code">
+                <pre><code class="language-jsx">
+import React, { useState } from 'react';
+
+function Toggle() {
+    const [isOn, setIsOn] = useState(false);
+
+    const handleClick = () => {
+        setIsOn(!isOn);
+    };
+
+    return (
+        &lt;button onClick={handleClick}&gt;
+            {isOn ? 'Включено' : 'Выключено'}
+        &lt;/button&gt;
+    );
+}
+
+export default Toggle;
+                </code></pre>
+            </div>
+
+            <p><strong>Пояснения:</strong></p>
+            <ul>
+                <li><code>useState</code>: Хук, позволяющий добавить состояние в функциональный компонент.</li>
+                <li><code>handleClick</code>: Функция, которая вызывается при клике на кнопку и изменяет состояние <code>isOn</code>.</li>
+                <li>Тернарный оператор: <code>isOn ? 'Включено' : 'Выключено'</code> определяет, какой текст отображать на кнопке.</li>
+            </ul>
+	      <details>
+		<summary><strong>Как это выглядит</strong></summary>
+		<img src="off.jpeg" alt="Кнопка">
+		<img src="on.jpeg" alt="Кнопка">
+	      </details>
+            <h3>Пример: Форма обратной связи</h3>
+            <p>В этом примере показано, как создать форму обратной связи, которая позволяет пользователю вводить текст и отправлять его.</p>
+
+            <div class="react-code">
+                <pre><code class="language-jsx">
+import React, { useState } from 'react';
+
+function FeedbackForm() {
+    const [name, setName] = useState('');
+    const [message, setMessage] = useState('');
+
+    const handleSubmit = (event) => {
+        event.preventDefault(); // Предотвращаем перезагрузку страницы
+        alert(`Спасибо, ${name}! Ваше сообщение отправлено: ${message}`);
+    };
+
+    return (
+        &lt;form onSubmit={handleSubmit}&gt;
+            &lt;label&gt;
+                Имя:
+                &lt;input
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                /&gt;
+            &lt;/label&gt;
+            &lt;label&gt;
+                Сообщение:
+                &lt;textarea
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                /&gt;
+            &lt;/label&gt;
+            &lt;button type="submit"&gt;Отправить&lt;/button&gt;
+        &lt;/form&gt;
+    );
+}
+
+export default FeedbackForm;
+                </code></pre>
+            </div>
+
+            <p><strong>Пояснения:</strong></p>
+            <ul>
+                <li><code>useState</code> используется для хранения значений полей формы (имя и сообщение).</li>
+                <li><code>onChange</code>: Обработчик событий, который вызывается при изменении значения в поле формы и обновляет состояние.</li>
+                <li><code>handleSubmit</code>: Функция, которая вызывается при отправке формы и обрабатывает данные.</li>
+                <li><code>event.preventDefault()</code>: Предотвращает стандартное поведение формы (перезагрузку страницы).</li>
+            </ul>
+	      <details>
+		<summary><strong>Как это выглядит</strong></summary>
+		<img src="сообщение.jpeg" alt="Сообщение">
+		<img src="mess.png" alt="Сообщение">
+	      </details>
+            <h3>Пример: Список задач (Todo List)</h3>
+            <p>Этот пример показывает, как создать простой список задач, который позволяет добавлять, удалять и отмечать задачи как выполненные.</p>
+
+            <div class="react-code">
+                <pre><code class="language-jsx">
+import React, { useState } from 'react';
+
+function TodoList() {
+    const [tasks, setTasks] = useState([]);
+    const [newTask, setNewTask] = useState('');
+
+    const handleInputChange = (event) => {
+        setNewTask(event.target.value);
+    };
+
+    const handleAddTask = () => {
+        if (newTask.trim() !== '') {
+            setTasks([...tasks, { id: Date.now(), text: newTask, completed: false }]);
+            setNewTask('');
+        }
+    };
+
+    const handleCompleteTask = (id) => {
+        setTasks(tasks.map(task =>
+            task.id === id ? { ...task, completed: !task.completed } : task
+        ));
+    };
+
+    const handleDeleteTask = (id) => {
+        setTasks(tasks.filter(task => task.id !== id));
+    };
+
+    return (
+        &lt;div&gt;
+            &lt;input
+                type="text"
+                value={newTask}
+                onChange={handleInputChange}
+                placeholder="Добавить задачу"
+            /&gt;
+            &lt;button onClick={handleAddTask}&gt;Добавить&lt;/button&gt;
+            &lt;ul&gt;
+                {tasks.map(task => (
+                    &lt;li key={task.id}&gt;
+                        &lt;span style={{ textDecoration: task.completed ? 'line-through' : 'none' }}&gt;
+                            {task.text}
+                        &lt;/span&gt;
+                        &lt;button onClick={() => handleCompleteTask(task.id)}&gt;
+                            {task.completed ? 'Снять' : 'Выполнить'}
+                        &lt;/button&gt;
+                        &lt;button onClick={() => handleDeleteTask(task.id)}&gt;Удалить&lt;/button&gt;
+                    &lt;/li&gt;
+                ))}
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    );
+}
+
+export default TodoList;
+                </code></pre>
+            </div>
+
+            <p><strong>Пояснения:</strong></p>
+            <ul>
+                <li><code>tasks</code>: Состояние для хранения списка задач.</li>
+                <li><code>newTask</code>: Состояние для хранения текста новой задачи.</li>
+                <li><code>handleInputChange</code>: Обработчик для обновления <code>newTask</code> при вводе текста.</li>
+                <li><code>handleAddTask</code>: Функция для добавления новой задачи в список.</li>
+                <li><code>handleCompleteTask</code>: Функция для отметки задачи как выполненной.</li>
+                <li><code>handleDeleteTask</code>: Функция для удаления задачи из списка.</li>
+                <li><code>tasks.map</code>: Используется для отображения списка задач.</li>
+            </ul>
+	      <details>
+		<summary><strong>Как это выглядит</strong></summary>
+		<img src="todo list.jpeg" alt="Список задач">
+	      </details>
+            <h3>Дополнительные ресурсы</h3>
+            <ul>
+                <li><a href="https://tproger.ru/translations/react-basic-weather-app" target="_blank">Пишем приложение на React с нуля</a></li>
+                <li><a href="https://stepik.org/course/210768/promo?search=6935090822" target="_blank">Курс на Stepik</a></li>
+                <li><a href="https://www.codecademy.com/learn/learn-react" target="_blank">Codecademy Learn React</a></li>
+            </ul>
+        </section>
+    </main>
+
+    
+</body>
+</html>

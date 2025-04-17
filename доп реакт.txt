@@ -1,0 +1,63 @@
+{
+            background-color: #282c34; /* Темный фон для кода */
+            color: #abb2bf; /* Светлый цвет текста */
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto; /* Горизонтальная прокрутка */
+            font-family: monospace;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-dark.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+
+    <style>
+        /* Дополнительные стили для раздела React (улучшенные) */
+        .react-code {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: monospace;
+            overflow-x: auto; /* Для горизонтальной прокрутки, если код слишком длинный */
+        }
+
+        .react-lesson {
+            margin-bottom: 40px;
+        }
+
+        .react-lesson h2 {
+            border-bottom: 2px solid #4CAF50; 
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+        .react-lesson h3 {
+            margin-top: 25px;
+            font-size: 1.3em;
+        }
+
+        .react-lesson p {
+            margin-bottom: 15px;
+        }
+
+        .react-example {
+            border: 1px solid #61dafb;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Стили для CodePen (пример) */
+        .codepen {
+            height: 300px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+    </style>

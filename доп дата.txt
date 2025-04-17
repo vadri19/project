@@ -1,0 +1,63 @@
+{
+            border-bottom: 3px solid #61afef; /* VS Code Blue */
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+
+код цвет:
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-dark.min.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+
+{
+            background-color: #282c34; /* Темный фон для кода */
+            color: #abb2bf; /* Светлый цвет текста */
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto; /* Горизонтальная прокрутка */
+            font-family: monospace;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+
+
+<style>
+        .data-science-code {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: monospace;
+            overflow-x: auto;
+        }
+
+        .data-science-lesson {
+            margin-bottom: 40px;
+        }
+
+        .data-science-lesson h2 {
+            border-bottom: 2px solid #4CAF50; /* Зеленый цвет */
+            padding-bottom: 5px;
+        }
+
+        .data-science-lesson h3 {
+            margin-top: 25px;
+            font-size: 1.3em;
+        }
+
+        .data-science-lesson p {
+            margin-bottom: 15px;
+        }
+
+        .data-science-example {
+            border: 1px solid #61afef;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>

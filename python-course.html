@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курс Python для начинающих</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <style>
+        .python-code {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: monospace;
+            overflow-x: auto; /* Для горизонтальной прокрутки, если код слишком длинный */
+        }
+
+        .python-lesson {
+            margin-bottom: 30px;
+        }
+
+        .python-lesson h2 {
+            border-bottom: 2px solid #4CAF50; /* Зеленый цвет */
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Курс Python для начинающих</h1>
+	<a href="index.html" class="button">Главная</a>
+    </header>
+
+    <main>
+        <section class="python-lesson">
+            <h2>Урок 1: Введение в Python</h2>
+            <p>Python - это простой и мощный язык программирования. Он отлично подходит для начинающих.</p>
+            <h3>Что вам понадобится:</h3>
+            <ul>
+                <li>Установленный Python (версия 3.6 или выше).</li>
+                <li>Текстовый редактор (VS Code, Sublime Text, Atom).</li>
+            </ul>
+            <h3>Первая программа: "Hello, World!"</h3>
+            <p>Создайте файл `hello.py` и добавьте в него следующий код:</p>
+            <div class="python-code">
+                <code>
+                    print("Hello, World!")
+                </code>
+            </div>
+            <p>Запустите программу в терминале</p>
+        </section>
+
+        <section class="python-lesson">
+            <h2>Урок 2: Переменные и типы данных</h2>
+            <p>Переменные используются для хранения данных. В Python есть несколько основных типов данных:</p>
+            <ul>
+                <li>Целые числа (int): `10`, `-5`, `0`</li>
+                <li>Числа с плавающей точкой (float): `3.14`, `-2.5`</li>
+                <li>Строки (str): `"Hello"`, `'Python'`</li>
+                <li>Логические значения (bool): `True`, `False`</li>
+            </ul>
+            <p>Пример использования переменных:</p>
+            <div class="python-code">
+                <code>
+                    name = "Alice"
+                    age = 30
+                    pi = 3.14
+                    is_student = False
+
+                    print(f"Name: {name}")
+                    print(f"Age: {age}")
+                    print(f"Pi: {pi}")
+                    print(f"Is student: {is_student}")
+                </code>
+            </div>
+        </section>
+
+        <section class="python-lesson">
+            <h2>Урок 3: Условные операторы (if, else, elif)</h2>
+            <p>Условные операторы позволяют выполнять код в зависимости от определенных условий.</p>
+            <div class="python-code">
+                <code>
+                    age = 20
+
+                    if age >= 18:
+                        print("Вы совершеннолетний")
+                    else:
+                        print("Вы несовершеннолетний")
+                </code>
+            </div>
+        </section>
+
+        <section class="python-lesson">
+            <h2>Урок 4: Циклы (for, while)</h2>
+            <p>Циклы позволяют повторять определенный блок кода несколько раз.</p>
+            <h3>Цикл for:</h3>
+            <div class="python-code">
+                <code>
+                    for i in range(5):
+                        print(i)  # Выведет числа от 0 до 4
+                </code>
+            </div>
+            <h3>Цикл while:</h3>
+            <div class="python-code">
+                <code>
+                    count = 0
+                    while count < 5:
+                        print(count)
+                        count += 1
+                </code>
+            </div>
+        </section>
+
+        <section class="python-lesson">
+            <h2>Урок 5: Функции</h2>
+            <p>Функции позволяют организовывать код в логические блоки и повторно использовать его.</p>
+            <div class="python-code">
+                <code>
+                    def greet(name):
+                        print(f"Hello, {name}!")
+
+                    greet("Bob")  # Вызовет функцию и выведет "Hello, Bob!"
+                </code>
+            </div>
+        </section>
+
+        <section class="python-lesson">
+            <h2>Дополнительные ресурсы</h2>
+            <ul>
+                <li><a href="https://www.python.org/doc/" target="_blank">Официальная документация Python</a></li>
+                <li><a href="https://stepik.org/course/512/syllabus" target="_blank">Курс Python на Stepik</a></li>
+                <li><a href="https://www.codecademy.com/learn/learn-python-3" target="_blank">Курс Python на Codecademy</a></li>
+            </ul>
+        </section>
+    </main>
+
+   
+
+
+</body>
+</html>

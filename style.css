@@ -1,0 +1,195 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+main {
+    padding: 2em;
+}
+
+section {
+    margin-bottom: 2em;
+    background-color: #fff;
+    padding: 1.5em;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.course-item {
+    width: 300px;
+    margin-bottom: 1em;
+    padding: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.lab-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.lab-item {
+  width: 300px;
+  margin-bottom: 1em;
+  padding: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.lab-item img {
+  width: 100%;
+  height: auto;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position:relative; 
+    bottom:0; 
+    width:100%;
+}
+
+/* Стили для дата сайнс */
+.data-science-code {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: monospace;
+            overflow-x: auto;
+	    margin-bottom: 20px;
+        }
+
+        .data-science-lesson {
+            margin-bottom: 40px;
+        }
+
+        .data-science-lesson h2 {
+            border-bottom: 2px solid #4CAF50; /* Зеленый цвет */
+            padding-bottom: 5px;
+        }
+
+        .data-science-lesson h3 {
+            margin-top: 25px;
+            font-size: 1.3em;
+        }
+
+        .data-science-lesson p {
+            margin-bottom: 15px;
+        }
+
+        .data-science-example {
+            border: 1px solid #61afef;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+ /* Дополнительные стили React */
+        .react-code {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: monospace;
+            overflow-x: auto; 
+        }
+
+        .react-lesson {
+            margin-bottom: 40px;
+        }
+
+        .react-lesson h2 {
+            border-bottom: 2px solid #4CAF50; 
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+        .react-lesson h3 {
+            margin-top: 25px;
+            font-size: 1.3em;
+        }
+
+        .react-lesson p {
+            margin-bottom: 15px;
+        }
+
+        .react-example {
+            border: 1px solid #61dafb;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        /* Стили для CodePen (пример) */
+        .codepen {
+            height: 300px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+/* */
+/* Дополнительные стили для лаб */
+        .lab-video {
+            margin-bottom: 30px;
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .lab-video h3 {
+            margin-top: 0;
+        }
+
+        .lab-video p {
+            margin-bottom: 10px;
+        }
+
+        .responsive-video {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .responsive-video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
